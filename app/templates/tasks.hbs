@@ -1,0 +1,14 @@
+{{page-title "Tasks"}}
+{{outlet}}
+
+<h1>My tasks</h1>
+
+{{#each model as |task|}}
+    <h3>{{task.title}}</h3>
+    <div>
+      <span>Due:</span> {{task.deadline}}
+    </div>
+    <div>
+      <span>Done:</span> {{task.done}}
+    </div>
+{{/each}}

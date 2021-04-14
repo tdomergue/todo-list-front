@@ -1,0 +1,20 @@
+.flexbox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: top;
+  margin: 50px 0;
+}
+
+.card {
+  width: 500px;
+  border: thin solid ;
+  background-color: #F4F4F4;
+  margin: 20px 0;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.task-form {
+  margin-top: 50px;
+}

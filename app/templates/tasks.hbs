@@ -1,18 +1,37 @@
 {{page-title "Tasks"}}
 
-{{#link-to 'tasks.new'}}Create Task{{/link-to}}
-<hr>
+<div class="flexbox">
+  <div>
 
-{{outlet}}
+    <h1 class="text-center">My tasks</h1>
 
-<h1>My tasks</h1>
+    {{#each model as |task|}}
+      <div class="card">    
+        <h3>{{task.title}}</h3>
+        <div>
+          <span>Due:</span> {{task.deadline}}
+        </div>
+        <div>
+          <div>
+            <Input
+              @type="checkbox"
+              @checked={{task.done}}
+              {{!-- {{on "input" this.doTask}} --}}
+            />
+          </div>
+          <span>Done:</span> {{task.done}}
+        </div>
+      </div>
+    {{/each}}
 
-{{#each model as |task|}}
-    <h3>{{task.title}}</h3>
-    <div>
-      <span>Due:</span> {{task.deadline}}
-    </div>
-    <div>
-      <span>Done:</span> {{task.done}}
-    </div>
-{{/each}}
+  </div>
+  <div class="task-form">
+  
+    {{#link-to 'tasks.new' class="btn btn-primary"}}Add a Task{{/link-to}}
+
+    {{outlet}}
+
+  </div>
+</div>
+
+

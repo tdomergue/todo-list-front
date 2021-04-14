@@ -4,7 +4,7 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'todo-list-front',
     environment,
-    rootURL: '/tasks',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

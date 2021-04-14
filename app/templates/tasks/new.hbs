@@ -1,0 +1,16 @@
+{{page-title "New"}}
+{{outlet}}
+
+<h1>New Task</h1>
+
+<form {{action "addTask" on="submit"}}>
+  <p>
+    Title: {{input type='text' value=title}}
+  </p>
+  <p>
+    Deadline: {{input type='text' value=deadline}}
+  </p>
+  <p>
+    {{input type="submit" value="Submit"}}
+  </p>
+</form>
